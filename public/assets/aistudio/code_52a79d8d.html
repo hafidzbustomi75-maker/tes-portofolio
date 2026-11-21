@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>HAFIDZ // Systems &amp; Engineering</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.grid-matrix-bg{background-image:linear-gradient(to right,rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:44px 44px;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'surface-container-high': '#292a2c', 'secondary-fixed': '#e0e2e6', 'surface-container-lowest': '#0d0e10', 'inverse-primary': '#00668a', 'surface-container-highest': '#343537', 'primary': '#8ed5ff', 'surface-tint': '#7bd0ff', 'on-primary-fixed': '#001e2c', 'surface-container-low': '#1b1c1e', 'error-container': '#93000a', 'tertiary-fixed-dim': '#c0c7d3', 'surface-variant': '#343537', 'surface-dim': '#121315', 'tertiary-container': '#abb2be', 'on-background': '#e3e2e5', 'secondary-fixed-dim': '#c4c7ca', 'outline': '#87929a', 'surface-bright': '#38393b', 'primary-fixed-dim': '#7bd0ff', 'primary-fixed': '#c4e7ff', 'inverse-on-surface': '#303033', 'on-primary-fixed-variant': '#004c69', 'on-tertiary-fixed': '#151c25', 'on-tertiary': '#2a313b', 'error': '#ffb4ab', 'on-surface-variant': '#bdc8d1', 'on-tertiary-fixed-variant': '#404752', 'on-secondary-fixed-variant': '#44474a', 'background': '#121315', 'on-surface': '#e3e2e5', 'surface-container': '#1f2022', 'secondary': '#c4c7ca', 'on-tertiary-container': '#3e454f', 'primary-container': '#38bdf8', 'on-error-container': '#ffdad6', 'surface': '#121315', 'on-error': '#690005', 'on-secondary': '#2d3134', 'on-secondary-container': '#b6b8bc', 'inverse-surface': '#e3e2e5', 'tertiary-fixed': '#dce3f0', 'tertiary': '#c7cdda', 'on-primary': '#00354a', 'on-primary-container': '#004965', 'on-secondary-fixed': '#191c1f', 'secondary-container': '#46494d', 'outline-variant': '#3e484f' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'space-sm': '0.5rem', 'space-xl': '2.5rem', 'gutter': '1.5rem', 'margin': '3rem', 'space-lg': '1.5rem', 'space-md': '1rem', 'margin-mobile': '1.25rem', 'gutter-mobile': '1rem', 'space-xs': '0.25rem' }, 'fontFamily': { 'body-sm': ['Inter'], 'display-xl': ['Space Grotesk'], 'headline-lg': ['Space Grotesk'], 'label-mono-lg': ['JetBrains Mono'], 'headline-md': ['Space Grotesk'], 'display-xl-mobile': ['Space Grotesk'], 'body-lg': ['Inter'], 'body-md': ['Inter'], 'label-mono-sm': ['JetBrains Mono'], 'headline-lg-mobile': ['Space Grotesk'] }, 'fontSize': { 'body-sm': ['13px', { 'lineHeight': '20px', 'fontWeight': '400' }], 'display-xl': ['64px', { 'lineHeight': '72px', 'letterSpacing': '-0.03em', 'fontWeight': '700' }], 'headline-lg': ['36px', { 'lineHeight': '44px', 'letterSpacing': '-0.02em', 'fontWeight': '600' }], 'label-mono-lg': ['14px', { 'lineHeight': '20px', 'letterSpacing': '0.05em', 'fontWeight': '500' }], 'headline-md': ['24px', { 'lineHeight': '32px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'display-xl-mobile': ['38px', { 'lineHeight': '46px', 'letterSpacing': '-0.02em', 'fontWeight': '700' }], 'body-lg': ['18px', { 'lineHeight': '28px', 'fontWeight': '400' }], 'body-md': ['15px', { 'lineHeight': '24px', 'fontWeight': '400' }], 'label-mono-sm': ['11px', { 'lineHeight': '16px', 'letterSpacing': '0.08em', 'fontWeight': '500' }], 'headline-lg-mobile': ['28px', { 'lineHeight': '36px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }] } } } };</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md grid-matrix-bg min-h-screen selection:bg-primary selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 h-[74px] bg-[#0A0B0D]/80 backdrop-blur-[14px] border-b border-white/[0.12]"><div class="max-w-7xl mx-auto h-full px-gutter flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="portfolio-overview" href="#"><div class="flex items-center gap-1.5"><span class="w-1.5 h-6 bg-primary transform -skew-x-[24deg] transition-transform group-hover:scale-y-110"></span><span class="w-1.5 h-6 bg-primary/70 transform -skew-x-[24deg] transition-transform group-hover:scale-y-110"></span><span class="w-1.5 h-6 bg-primary/40 transform -skew-x-[24deg] transition-transform group-hover:scale-y-110"></span></div><span class="font-headline-md text-[18px] leading-none font-bold tracking-[0.08em] text-on-surface uppercase pl-1">HAFIDZ</span></a><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary border-b-2 border-primary"><a class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-white transition-colors py-1" data-path="about" href="#about">ABOUT</a><a class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-white transition-colors py-1" data-path="skills" href="#skills">SKILLS</a><a class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-white transition-colors py-1" data-path="experience" href="#experience">EXPERIENCE</a><a class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-white transition-colors py-1" data-path="projects" href="#projects">PROJECTS</a><a class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-white transition-colors py-1" data-path="services" href="#services">SERVICES</a><a class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-white transition-colors py-1" data-path="contact" href="#contact">CONTACT</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center font-label-mono-sm text-label-mono-sm tracking-[0.08em] uppercase px-4 py-2 bg-transparent text-on-surface border border-white/[0.12] hover:border-primary hover:text-primary transition-all duration-200" data-path="contact" href="#contact">GET IN TOUCH →</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center border border-primary/20"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-[74px] bg-transparent"><div class="flex flex-col w-full text-on-surface bg-surface-container-lowest">
+<!-- 1. HERO SECTION -->
+<section class="min-h-[942px] grid grid-cols-1 lg:grid-cols-12 relative overflow-hidden items-center border-b border-white/[0.12]" id="hero">
+<!-- Ambient Radial Illumination -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[140px] pointer-events-none"></div>
+<!-- Left Content Column (7 cols) -->
+<div class="lg:col-span-7 flex flex-col justify-center px-[6vw] py-16 lg:py-24 z-10">
+<div class="inline-flex items-center gap-2 font-label-mono-sm text-label-mono-sm text-[#9CA3AF] tracking-[0.14em] uppercase mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>00 / SYSTEM INITIALIZED • ENGINEERED TO LEARN &amp; BUILD</span>
+</div>
+<h1 class="font-display-xl text-[48px] sm:text-[62px] lg:text-[76px] leading-[0.95] font-bold uppercase tracking-tight mb-8">
+<span class="block text-white">INFORMATICS.</span>
+<span class="block text-[#9CA3AF]">DATA &amp; AI.</span>
+<span class="block text-white">LOGIC.</span>
+<span class="block text-[#6B7280]">DRIVEN.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl mb-10 leading-relaxed">
+        Muhammad Hafidz Bustomi — Informatics Engineering undergraduate at Institut Teknologi PLN, passionate about Data Science, AI Agent Automation, and Software Engineering.
+      </p>
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center justify-center font-label-mono-sm text-label-mono-sm uppercase font-bold tracking-[0.14em] px-6 py-3.5 bg-[#E5E7EB] text-[#0A0B0D] border border-[#E5E7EB] hover:bg-white hover:shadow-[0_0_20px_rgba(56,189,248,0.35)] transition-all" href="#projects">
+          EXPLORE PROJECTS →
+        </a>
+<a class="inline-flex items-center justify-center font-label-mono-sm text-label-mono-sm uppercase tracking-[0.14em] px-6 py-3.5 bg-white/[0.03] text-[#F4F5F7] border border-white/[0.28] hover:border-primary hover:text-primary transition-all" href="#about">
+          ◉ SYSTEM PROFILE
+        </a>
+</div>
+</div>
+<!-- Right Visual Stage (5 cols) - Layered 3D Technical Sculpture & Coordinates -->
+<div class="lg:col-span-5 relative h-full min-h-[420px] lg:min-h-[640px] flex items-center justify-center p-6 lg:p-12 border-t lg:border-t-0 lg:border-l border-white/[0.12] bg-[#0E1015]/60 backdrop-blur-sm overflow-hidden">
+<!-- Coordinate Telemetry Watermarks -->
+<div class="absolute top-4 left-6 font-label-mono-sm text-[10px] text-[#6B7280] tracking-widest uppercase">
+        LOC // LAT 06°10'S • LON 106°47'E
+      </div>
+<div class="absolute top-4 right-6 font-label-mono-sm text-[10px] text-[#6B7280] tracking-widest uppercase">
+        NODE // ITPLN.CORE
+      </div>
+<div class="absolute bottom-4 left-6 font-label-mono-sm text-[10px] text-primary/70 tracking-widest uppercase flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-primary rounded-full animate-ping"></span>
+        STREAM // SYNCHRONIZED
+      </div>
+<div class="absolute bottom-4 right-6 font-label-mono-sm text-[10px] text-[#6B7280] tracking-widest uppercase">
+        VER // 2.0.26
+      </div>
+<!-- Precision SVG Sculpture -->
+<div class="relative w-full max-w-[380px] aspect-square flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-12 hover:rotate-0 transition-transform duration-700 ease-out drop-shadow-[0_0_35px_rgba(56,189,248,0.15)]" viewbox="0 0 400 400">
+<defs>
+<lineargradient id="sculptureGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"></stop>
+<stop offset="50%" stop-color="#1F242D" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#0A0B0D" stop-opacity="1"></stop>
+</lineargradient>
+<lineargradient id="bladeGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#E5E7EB" stop-opacity="0.7"></stop>
+<stop offset="100%" stop-color="#38BDF8" stop-opacity="0.1"></stop>
+</lineargradient>
+</defs>
+<!-- Outer Concentric Coordinate Rings -->
+<circle cx="200" cy="200" fill="none" r="180" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3 6" stroke-width="1"></circle>
+<circle cx="200" cy="200" fill="none" r="140" stroke="rgba(56,189,248,0.2)" stroke-width="1.5"></circle>
+<circle cx="200" cy="200" fill="none" r="95" stroke="rgba(255,255,255,0.15)" stroke-dasharray="12 4" stroke-width="1"></circle>
+<!-- Crosshair Latices -->
+<line stroke="rgba(255,255,255,0.06)" stroke-width="1" x1="20" x2="380" y1="200" y2="200"></line>
+<line stroke="rgba(255,255,255,0.06)" stroke-width="1" x1="200" x2="200" y1="20" y2="380"></line>
+<!-- Angled Turbine & Mechanical Rib Blades (-28deg primary flow) -->
+<g transform="rotate(-28 200 200)">
+<rect fill="url(#bladeGrad)" height="130" rx="2" stroke="rgba(255,255,255,0.2)" stroke-width="1" width="24" x="188" y="40"></rect>
+<rect fill="url(#bladeGrad)" height="130" rx="2" stroke="rgba(255,255,255,0.2)" stroke-width="1" width="24" x="188" y="230"></rect>
+<rect fill="url(#bladeGrad)" height="24" rx="2" stroke="rgba(255,255,255,0.2)" stroke-width="1" width="130" x="40" y="188"></rect>
+<rect fill="url(#bladeGrad)" height="24" rx="2" stroke="rgba(255,255,255,0.2)" stroke-width="1" width="130" x="230" y="188"></rect>
+<!-- Angled diagonal fins -->
+<polygon fill="rgba(56,189,248,0.15)" points="120,90 145,75 280,310 255,325" stroke="rgba(56,189,248,0.4)" stroke-width="1"></polygon>
+<polygon fill="rgba(255,255,255,0.08)" points="90,280 75,255 310,120 325,145" stroke="rgba(255,255,255,0.2)" stroke-width="1"></polygon>
+</g>
+<!-- Core Precision Kinetic Hub -->
+<polygon fill="#16191F" points="200,155 240,178 240,222 200,245 160,222 160,178" stroke="#38BDF8" stroke-width="2"></polygon>
+<circle cx="200" cy="200" fill="#38BDF8" r="16"></circle>
+<circle cx="200" cy="200" fill="#0A0B0D" r="6"></circle>
+<!-- Outer Tick Marks -->
+<circle cx="200" cy="20" fill="#38BDF8" r="3"></circle>
+<circle cx="380" cy="200" fill="#38BDF8" r="3"></circle>
+<circle cx="200" cy="380" fill="#38BDF8" r="3"></circle>
+<circle cx="20" cy="200" fill="#38BDF8" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Bottom Telemetry Bar -->
+<div class="col-span-full border-t border-white/[0.12] bg-[#0A0B0D]/85 backdrop-blur-[10px] px-[6vw] py-4">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-label-mono-sm text-label-mono-sm text-[#9CA3AF]">
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">//</span>
+<span>LOC // MADIUN — JAKARTA, ID</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">//</span>
+<span>FOCUS // PYTHON · ALGO · AI AGENTS</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">//</span>
+<span>INSTITUTION // ITPLN INFORMATICS</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="text-white">STATUS // OPEN FOR COLLABORATION</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. ABOUT & EDUCATION SECTION -->
+<section class="w-full max-w-[1280px] mx-auto px-[6vw] py-[100px] border-t border-white/[0.12]" id="about">
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] tracking-[0.14em] uppercase mb-3.5">
+      • 01 / PROFILE SPECIFICATION •
+    </div>
+<h2 class="font-headline-lg text-[38px] sm:text-[52px] lg:text-[68px] font-bold text-white uppercase leading-none tracking-tight mb-12">
+      SYSTEM OVERVIEW.
+    </h2>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14">
+<!-- Left Column (7 cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between">
+<div>
+<p class="font-headline-md text-[22px] leading-snug text-white font-medium mb-6">
+            Hello! I'm Hafidz, an Informatics Engineering student focused on turning structured logic into practical software and intelligent workflows.
+          </p>
+<p class="font-body-md text-body-md text-[#9CA3AF] leading-relaxed mb-10">
+            Currently pursuing my Bachelor's degree in Informatics at Institut Teknologi PLN (ITPLN) after graduating from SMAN 3 Taruna Angkasa Jawa Timur. My academic and personal explorations center on Python programming, algorithmic problem solving, Data Science, and building automated AI Agent systems.
+          </p>
+</div>
+<!-- 3 Focus Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-[#16191F] border border-white/[0.12] p-5 hover:border-primary/50 transition-colors">
+<div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider mb-2">DOMAIN 01</div>
+<div class="font-headline-md text-[16px] text-white font-bold mb-1">Data Science</div>
+<div class="font-body-sm text-body-sm text-[#9CA3AF]">Analytical thinking &amp; data structuring</div>
+</div>
+<div class="bg-[#16191F] border border-white/[0.12] p-5 hover:border-primary/50 transition-colors">
+<div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider mb-2">DOMAIN 02</div>
+<div class="font-headline-md text-[16px] text-white font-bold mb-1">AI Automation</div>
+<div class="font-body-sm text-body-sm text-[#9CA3AF]">Intelligent workflows &amp; AI agents</div>
+</div>
+<div class="bg-[#16191F] border border-white/[0.12] p-5 hover:border-primary/50 transition-colors">
+<div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider mb-2">DOMAIN 03</div>
+<div class="font-headline-md text-[16px] text-white font-bold mb-1">Software Eng</div>
+<div class="font-body-sm text-body-sm text-[#9CA3AF]">Clean algorithms &amp; system flowcharts</div>
+</div>
+</div>
+</div>
+<!-- Right Column (Academic Log - 5 cols) -->
+<div class="lg:col-span-5 bg-[#0F1116] border border-white/[0.12] p-8 flex flex-col justify-start">
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] uppercase tracking-wider mb-8 flex items-center justify-between">
+<span>// ACADEMIC LOG</span>
+<span class="text-primary font-mono text-[10px]">RECORD_ID: 8812-ITPLN</span>
+</div>
+<!-- Vertical Timeline with 1px border & 8px square nodes -->
+<div class="relative pl-6 border-l border-white/[0.28] space-y-10">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<div class="absolute -left-[29px] top-1.5 w-2 h-2 bg-white"></div>
+<div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider mb-1">
+              2026 — EXPECTED GRADUATION
+            </div>
+<h3 class="font-headline-md text-[18px] font-bold text-white mb-1">
+              Institut Teknologi PLN (ITPLN)
+            </h3>
+<p class="font-body-sm text-body-sm text-[#9CA3AF] mb-3">
+              S1 Teknik Informatika (Informatics Engineering)
+            </p>
+<span class="inline-block font-label-mono-sm text-[11px] px-2.5 py-1 bg-[#16191F] border border-white/[0.12] text-secondary">
+              Jakarta, Indonesia
+            </span>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<div class="absolute -left-[29px] top-1.5 w-2 h-2 bg-white"></div>
+<div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider mb-1">
+              2023 — 2026
+            </div>
+<h3 class="font-headline-md text-[18px] font-bold text-white mb-1">
+              SMAN 3 Taruna Angkasa Jawa Timur
+            </h3>
+<p class="font-body-sm text-body-sm text-[#9CA3AF] mb-3">
+              Senior High School
+            </p>
+<span class="inline-block font-label-mono-sm text-[11px] px-2.5 py-1 bg-[#16191F] border border-white/[0.12] text-secondary">
+              Madiun, Jawa Timur
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. TECHNICAL STACK & CORE COMPETENCIES -->
+<section class="w-full max-w-[1280px] mx-auto px-[6vw] py-[100px] border-t border-white/[0.12]" id="skills">
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] tracking-[0.14em] uppercase mb-3.5">
+      • 02 / TECHNICAL CAPABILITIES •
+    </div>
+<h2 class="font-headline-lg text-[38px] sm:text-[52px] lg:text-[68px] font-bold text-white uppercase leading-none tracking-tight mb-12">
+      TOOLS &amp; STACK.
+    </h2>
+<!-- Row 1: Primary Toolkit Grid (5 cards across) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Card 1: Python -->
+<div class="bg-[#16191F] border border-white/[0.12] p-6 flex flex-col justify-between hover:border-primary/50 transition-colors group">
+<div class="flex items-center justify-between mb-8">
+<span class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF]">01</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<div class="my-6">
+<svg class="w-9 h-9 text-[#E5E7EB] group-hover:text-primary transition-colors" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2c-3.1 0-5 1.5-5 3.5v2.5h5v1H5.5C3.5 9 2 10.9 2 14s1.5 5 3.5 5h2v-2.5c0-1.7 1.3-3 3-3h5v-1h-6.5c-1.4 0-2.5-1.1-2.5-2.5V7c0-1.4 1.1-2.5 2.5-2.5h6c1.4 0 2.5 1.1 2.5 2.5v1.5h2V5.5C17 3.5 15.1 2 12 2zm-1.5 2a.75.75 0 110 1.5.75.75 0 010-1.5zM12 22c3.1 0 5-1.5 5-3.5v-2.5h-5v-1h6.5c2 0 3.5-1.9 3.5-5s-1.5-5-3.5-5h-2v2.5c0 1.7-1.3 3-3 3h-5v1h6.5c1.4 0 2.5 1.1 2.5 2.5V17c0 1.4-1.1 2.5-2.5 2.5h-6c-1.4 0-2.5-1.1-2.5-2.5v-1.5h-2v3C7 20.5 8.9 22 12 22zm1.5-2a.75.75 0 110-1.5.75.75 0 010 1.5z"></path>
+</svg>
+</div>
+<div>
+<div class="font-headline-md text-[18px] font-bold text-white mb-1">Python</div>
+<div class="font-label-mono-sm text-[10px] text-[#9CA3AF] tracking-wider uppercase">PROGRAMMING</div>
+</div>
+</div>
+<!-- Card 2: Excel -->
+<div class="bg-[#16191F] border border-white/[0.12] p-6 flex flex-col justify-between hover:border-primary/50 transition-colors group">
+<div class="flex items-center justify-between mb-8">
+<span class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF]">02</span>
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+</div>
+<div class="my-6">
+<svg class="w-9 h-9 text-[#E5E7EB] group-hover:text-emerald-400 transition-colors" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5.5 14l-2.5-3.8L8.5 17H6.8l3.6-5.1L7 7h1.8l2.3 3.6L13.3 7H15l-3.5 4.8L15.2 17h-1.7z"></path>
+</svg>
+</div>
+<div>
+<div class="font-headline-md text-[18px] font-bold text-white mb-1">MS Excel</div>
+<div class="font-label-mono-sm text-[10px] text-[#9CA3AF] tracking-wider uppercase">DATA &amp; SPREADSHEET</div>
+</div>
+</div>
+<!-- Card 3: Word -->
+<div class="bg-[#16191F] border border-white/[0.12] p-6 flex flex-col justify-between hover:border-primary/50 transition-colors group">
+<div class="flex items-center justify-between mb-8">
+<span class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF]">03</span>
+<span class="w-2 h-2 rounded-full bg-sky-400"></span>
+</div>
+<div class="my-6">
+<svg class="w-9 h-9 text-[#E5E7EB] group-hover:text-sky-400 transition-colors" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3.5 14h-1.8l-1.7-6.2L10.3 17H8.5L6.2 7h1.9l1.4 6.7L11.2 7h1.6l1.7 6.7L15.9 7h1.9L15.5 17z"></path>
+</svg>
+</div>
+<div>
+<div class="font-headline-md text-[18px] font-bold text-white mb-1">MS Word</div>
+<div class="font-label-mono-sm text-[10px] text-[#9CA3AF] tracking-wider uppercase">DOCUMENTATION</div>
+</div>
+</div>
+<!-- Card 4: PowerPoint -->
+<div class="bg-[#16191F] border border-white/[0.12] p-6 flex flex-col justify-between hover:border-primary/50 transition-colors group">
+<div class="flex items-center justify-between mb-8">
+<span class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF]">04</span>
+<span class="w-2 h-2 rounded-full bg-amber-400"></span>
+</div>
+<div class="my-6">
+<svg class="w-9 h-9 text-[#E5E7EB] group-hover:text-amber-400 transition-colors" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 8.5c0 1.4-1.1 2.5-2.5 2.5H9.5V17H8V7h3.5c1.4 0 2.5 1.1 2.5 2.5v2zm-4-1h2.5c.6 0 1-.4 1-1s-.4-1-1-1H10v2z"></path>
+</svg>
+</div>
+<div>
+<div class="font-headline-md text-[18px] font-bold text-white mb-1">PowerPoint</div>
+<div class="font-label-mono-sm text-[10px] text-[#9CA3AF] tracking-wider uppercase">PRESENTATION</div>
+</div>
+</div>
+<!-- Card 5: Canva -->
+<div class="bg-[#16191F] border border-white/[0.12] p-6 flex flex-col justify-between hover:border-primary/50 transition-colors group">
+<div class="flex items-center justify-between mb-8">
+<span class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF]">05</span>
+<span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+</div>
+<div class="my-6">
+<svg class="w-9 h-9 text-[#E5E7EB] group-hover:text-cyan-400 transition-colors" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c-2.49 0-4.5-2.01-4.5-4.5S10.51 7.5 13 7.5c1.66 0 3.14.89 3.95 2.22l-1.64.95C14.86 9.84 13.98 9.5 13 9.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5c.98 0 1.86-.34 2.31-1.17l1.64.95C16.14 15.61 14.66 16.5 13 16.5z"></path>
+</svg>
+</div>
+<div>
+<div class="font-headline-md text-[18px] font-bold text-white mb-1">Canva</div>
+<div class="font-label-mono-sm text-[10px] text-[#9CA3AF] tracking-wider uppercase">VISUAL DESIGN</div>
+</div>
+</div>
+</div>
+<!-- Row 2: Hard vs Soft Skills Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
+<!-- Left Panel: Hard Skills -->
+<div class="bg-[#16191F] border border-white/[0.12] p-8 flex flex-col justify-between">
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] uppercase tracking-wider mb-6">
+          // HARD SKILLS — TECHNICAL EXECUTION
+        </div>
+<div class="space-y-6">
+<div class="border-b border-white/[0.08] pb-5">
+<div class="flex items-center gap-3 mb-1.5">
+<span class="font-label-mono-sm text-label-mono-sm text-primary">01</span>
+<h4 class="font-headline-md text-[17px] font-bold text-white">Basic Python Programming</h4>
+</div>
+<p class="font-body-sm text-body-sm text-[#9CA3AF] pl-7">
+              Writing structured scripts, data handling, and foundational programming logic.
+            </p>
+</div>
+<div class="border-b border-white/[0.08] pb-5">
+<div class="flex items-center gap-3 mb-1.5">
+<span class="font-label-mono-sm text-label-mono-sm text-primary">02</span>
+<h4 class="font-headline-md text-[17px] font-bold text-white">Algorithm Design</h4>
+</div>
+<p class="font-body-sm text-body-sm text-[#9CA3AF] pl-7">
+              Decomposing problems into clear, step-by-step computational procedures.
+            </p>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-1.5">
+<span class="font-label-mono-sm text-label-mono-sm text-primary">03</span>
+<h4 class="font-headline-md text-[17px] font-bold text-white">System Flowcharting</h4>
+</div>
+<p class="font-body-sm text-body-sm text-[#9CA3AF] pl-7">
+              Designing visual logic diagrams and control flows prior to code implementation.
+            </p>
+</div>
+</div>
+</div>
+<!-- Right Panel: Soft Skills Matrix -->
+<div class="bg-[#16191F] border border-white/[0.12] p-8 flex flex-col justify-between">
+<div>
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] uppercase tracking-wider mb-6">
+            // SOFT SKILLS — OPERATIONAL TRAITS
+          </div>
+<p class="font-body-sm text-body-sm text-[#9CA3AF] mb-8 leading-relaxed">
+            Collaborative, disciplined, and focused competencies cultivated through academic rigor, team problem-solving, and extracurricular leadership.
+          </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+<div class="bg-[#0A0B0D] border border-white/[0.15] p-3 text-center font-label-mono-sm text-[12px] text-white uppercase tracking-wider hover:border-primary transition-colors">
+            Communication
+          </div>
+<div class="bg-[#0A0B0D] border border-white/[0.15] p-3 text-center font-label-mono-sm text-[12px] text-white uppercase tracking-wider hover:border-primary transition-colors">
+            Teamwork
+          </div>
+<div class="bg-[#0A0B0D] border border-white/[0.15] p-3 text-center font-label-mono-sm text-[12px] text-white uppercase tracking-wider hover:border-primary transition-colors">
+            Creativity
+          </div>
+<div class="bg-[#0A0B0D] border border-white/[0.15] p-3 text-center font-label-mono-sm text-[12px] text-white uppercase tracking-wider hover:border-primary transition-colors">
+            Problem Solving
+          </div>
+<div class="bg-[#0A0B0D] border border-white/[0.15] p-3 text-center font-label-mono-sm text-[12px] text-white uppercase tracking-wider hover:border-primary transition-colors">
+            Adaptability
+          </div>
+<div class="bg-[#0A0B0D] border border-white/[0.15] p-3 text-center font-label-mono-sm text-[12px] text-white uppercase tracking-wider hover:border-primary transition-colors">
+            Time Mgmt
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. LEADERSHIP & EXPERIENCE -->
+<section class="w-full max-w-[1280px] mx-auto px-[6vw] py-[100px] border-t border-white/[0.12]" id="experience">
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] tracking-[0.14em] uppercase mb-3.5">
+      • 03 / LEADERSHIP &amp; ACTIVITIES •
+    </div>
+<h2 class="font-headline-lg text-[38px] sm:text-[52px] lg:text-[68px] font-bold text-white uppercase leading-none tracking-tight mb-12">
+      EXPERIENCE.
+    </h2>
+<!-- Precision Horizontal Row -->
+<div class="border-t border-b border-white/[0.12] py-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<!-- Col 1: Date & Status -->
+<div class="md:col-span-3 flex flex-col gap-2">
+<span class="font-label-mono-sm text-label-mono-sm text-white font-semibold">2024 — PRESENT</span>
+<span class="inline-flex items-center gap-1.5 w-max font-label-mono-sm text-[11px] px-2.5 py-0.5 bg-[#16191F] border border-primary/40 text-primary shadow-[0_0_12px_rgba(56,189,248,0.2)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            ACTIVE ROLE
+          </span>
+</div>
+<!-- Col 2: Role & Organization -->
+<div class="md:col-span-4">
+<h3 class="font-headline-md text-[24px] font-bold text-white leading-tight">
+            Head of Calung Extracurricular
+          </h3>
+<p class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] mt-1">
+            SKI (Sie Kerohanian Islam)
+          </p>
+</div>
+<!-- Col 3: Description -->
+<div class="md:col-span-5">
+<p class="font-body-md text-body-md text-[#9CA3AF] leading-relaxed">
+            Led student members in organizing rehearsals, coordinating traditional music performances, and managing team schedules and collaborative school events.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. PROJECTS & SELECTED WORKS -->
+<section class="w-full max-w-[1280px] mx-auto px-[6vw] py-[100px] border-t border-white/[0.12]" id="projects">
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] tracking-[0.14em] uppercase mb-3.5">
+      • 04 / SELECTED WORKS &amp; INITIATIVES •
+    </div>
+<h2 class="font-headline-lg text-[38px] sm:text-[52px] lg:text-[68px] font-bold text-white uppercase leading-none tracking-tight mb-12">
+      PROJECTS.
+    </h2>
+<!-- 2-Column Card Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+<!-- Project 1 -->
+<div class="bg-[#121418] border border-white/[0.12] flex flex-col justify-between hover:border-white/[0.28] transition-all group">
+<!-- Procedural Blueprint Banner -->
+<div class="relative h-52 bg-[#090A0D] border-b border-white/[0.12] overflow-hidden flex items-center justify-center p-4">
+<!-- Flowchart Blueprint Matrix SVG -->
+<svg class="absolute inset-0 w-full h-full opacity-40" fill="none" viewbox="0 0 500 200">
+<path d="M 50 100 H 150 V 60 H 260 V 100 H 380 V 140 H 450" stroke="#38BDF8" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<rect fill="#16191F" height="30" stroke="#38BDF8" width="40" x="140" y="45"></rect>
+<circle cx="260" cy="100" fill="#16191F" r="14" stroke="#38BDF8"></circle>
+<polygon fill="#38BDF8" points="380,85 410,100 380,115"></polygon>
+<circle cx="50" cy="100" fill="#38BDF8" r="4"></circle>
+<circle cx="450" cy="140" fill="#38BDF8" r="4"></circle>
+</svg>
+<div class="absolute top-3 left-3 font-label-mono-sm text-[10px] px-2 py-0.5 bg-[#16191F] border border-white/[0.12] text-primary">
+            PYTHON &amp; ALGORITHMS
+          </div>
+<div class="font-label-mono-sm text-[11px] text-white/80 bg-[#16191F]/90 border border-white/[0.2] px-3 py-1.5 backdrop-blur-sm z-10">
+            [ MODULE BLUEPRINT // 01 ]
+          </div>
+</div>
+<!-- Body -->
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<div class="font-label-mono-sm text-[11px] text-[#9CA3AF] mb-1">2026 · ACADEMIC</div>
+<h3 class="font-headline-md text-[22px] font-bold text-white mb-2 group-hover:text-primary transition-colors">
+              Python Algorithmic &amp; Logic Exercises
+            </h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+              Collection of structured Python programs and flowchart-driven problem-solving modules.
+            </p>
+<ul class="space-y-2 mb-8 font-body-sm text-body-sm text-[#9CA3AF]">
+<li class="flex items-start gap-2">
+<span class="text-primary mt-0.5">▸</span>
+<span>Translated problem statements into formal flowcharts before coding.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary mt-0.5">▸</span>
+<span>Implemented modular Python functions for data processing and logic validation.</span>
+</li>
+</ul>
+</div>
+<!-- Footer -->
+<div class="pt-6 border-t border-white/[0.08] flex items-center justify-between">
+<div class="flex flex-wrap gap-2">
+<span class="font-label-mono-sm text-[11px] px-2 py-0.5 bg-[#16191F] text-[#9CA3AF]">Python</span>
+<span class="font-label-mono-sm text-[11px] px-2 py-0.5 bg-[#16191F] text-[#9CA3AF]">Flowchart</span>
+<span class="font-label-mono-sm text-[11px] px-2 py-0.5 bg-[#16191F] text-[#9CA3AF]">Algorithms</span>
+</div>
+<a class="font-label-mono-sm text-[11px] text-white hover:text-primary transition-colors flex items-center gap-1 font-semibold" href="#contact">
+              VIEW DETAILS ↗
+            </a>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bg-[#121418] border border-white/[0.12] flex flex-col justify-between hover:border-white/[0.28] transition-all group">
+<!-- Procedural Blueprint Banner -->
+<div class="relative h-52 bg-[#090A0D] border-b border-white/[0.12] overflow-hidden flex items-center justify-center p-4">
+<!-- Cybernetic AI Flowchart Blueprint SVG -->
+<svg class="absolute inset-0 w-full h-full opacity-40" fill="none" viewbox="0 0 500 200">
+<circle cx="150" cy="100" r="35" stroke="#38BDF8" stroke-dasharray="2 4" stroke-width="1"></circle>
+<circle cx="350" cy="100" r="35" stroke="#38BDF8" stroke-dasharray="2 4" stroke-width="1"></circle>
+<path d="M 185 100 H 315" stroke="#38BDF8" stroke-width="1.5"></path>
+<circle cx="250" cy="100" fill="#38BDF8" r="6"></circle>
+<path d="M 250 60 V 140" stroke="#38BDF8" stroke-dasharray="3 3" stroke-width="1"></path>
+<circle cx="150" cy="100" fill="#16191F" r="16" stroke="#E5E7EB"></circle>
+<circle cx="350" cy="100" fill="#16191F" r="16" stroke="#E5E7EB"></circle>
+</svg>
+<div class="absolute top-3 left-3 font-label-mono-sm text-[10px] px-2 py-0.5 bg-[#16191F] border border-white/[0.12] text-primary">
+            AI &amp; AUTOMATION
+          </div>
+<div class="font-label-mono-sm text-[11px] text-white/80 bg-[#16191F]/90 border border-white/[0.2] px-3 py-1.5 backdrop-blur-sm z-10">
+            [ MODULE BLUEPRINT // 02 ]
+          </div>
+</div>
+<!-- Body -->
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<div class="font-label-mono-sm text-[11px] text-[#9CA3AF] mb-1">2026 · SELF-INITIATED</div>
+<h3 class="font-headline-md text-[22px] font-bold text-white mb-2 group-hover:text-primary transition-colors">
+              AI Agent &amp; Workflow Exploration
+            </h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+              Early-stage research and prototyping on prompt-driven automation and data workflows.
+            </p>
+<ul class="space-y-2 mb-8 font-body-sm text-body-sm text-[#9CA3AF]">
+<li class="flex items-start gap-2">
+<span class="text-primary mt-0.5">▸</span>
+<span>Explored structured prompting and automated task routing.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary mt-0.5">▸</span>
+<span>Documented reproducible workflow blueprints for productivity.</span>
+</li>
+</ul>
+</div>
+<!-- Footer -->
+<div class="pt-6 border-t border-white/[0.08] flex items-center justify-between">
+<div class="flex flex-wrap gap-2">
+<span class="font-label-mono-sm text-[11px] px-2 py-0.5 bg-[#16191F] text-[#9CA3AF]">AI Agents</span>
+<span class="font-label-mono-sm text-[11px] px-2 py-0.5 bg-[#16191F] text-[#9CA3AF]">Automation</span>
+<span class="font-label-mono-sm text-[11px] px-2 py-0.5 bg-[#16191F] text-[#9CA3AF]">Data Science</span>
+</div>
+<a class="font-label-mono-sm text-[11px] text-white hover:text-primary transition-colors flex items-center gap-1 font-semibold" href="#contact">
+              VIEW DETAILS ↗
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. COLLABORATION & SERVICES -->
+<section class="w-full max-w-[1280px] mx-auto px-[6vw] py-[100px] border-t border-white/[0.12]" id="services">
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] tracking-[0.14em] uppercase mb-3.5">
+      • 05 / ENGAGEMENT MODES •
+    </div>
+<h2 class="font-headline-lg text-[38px] sm:text-[52px] lg:text-[68px] font-bold text-white uppercase leading-none tracking-tight mb-12">
+      HOW WE CAN WORK.
+    </h2>
+<!-- 2-Column Architectural Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1 -->
+<div class="bg-[#121418] border border-white/[0.12] p-8 flex flex-col justify-between hover:border-primary/40 transition-colors">
+<div>
+<div class="flex items-center justify-between font-label-mono-sm text-[11px] text-[#9CA3AF] mb-6">
+<span class="text-primary font-bold">MODE 01</span>
+<span>Jakarta · Madiun · Remote</span>
+</div>
+<h3 class="font-headline-md text-[22px] font-bold text-white mb-3">
+            Programming &amp; Algorithm Collaboration
+          </h3>
+<p class="font-body-md text-body-md text-[#9CA3AF] mb-6 leading-relaxed">
+            Open for collaborative Python coding projects, flowchart logic design, and Informatics study groups.
+          </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="font-label-mono-sm text-[11px] px-2.5 py-1 bg-[#16191F] border border-white/[0.08] text-white">Python</span>
+<span class="font-label-mono-sm text-[11px] px-2.5 py-1 bg-[#16191F] border border-white/[0.08] text-white">Algorithms</span>
+<span class="font-label-mono-sm text-[11px] px-2.5 py-1 bg-[#16191F] border border-white/[0.08] text-white">Flowchart</span>
+</div>
+</div>
+<div>
+<a class="inline-flex items-center justify-center font-label-mono-sm text-label-mono-sm uppercase tracking-[0.14em] px-5 py-3 bg-white/[0.03] text-[#F4F5F7] border border-white/[0.28] hover:border-primary hover:text-primary transition-all w-full sm:w-auto" href="mailto:hafidzbustomi75@gmail.com">
+            COLLABORATE VIA EMAIL →
+          </a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-[#121418] border border-white/[0.12] p-8 flex flex-col justify-between hover:border-primary/40 transition-colors">
+<div>
+<div class="flex items-center justify-between font-label-mono-sm text-[11px] text-[#9CA3AF] mb-6">
+<span class="text-primary font-bold">MODE 02</span>
+<span>Remote · Flexible</span>
+</div>
+<h3 class="font-headline-md text-[22px] font-bold text-white mb-3">
+            Data &amp; Documentation Support
+          </h3>
+<p class="font-body-md text-body-md text-[#9CA3AF] mb-6 leading-relaxed">
+            Structured spreadsheet organization, presentation deck design, and clear technical documentation.
+          </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="font-label-mono-sm text-[11px] px-2.5 py-1 bg-[#16191F] border border-white/[0.08] text-white">Excel</span>
+<span class="font-label-mono-sm text-[11px] px-2.5 py-1 bg-[#16191F] border border-white/[0.08] text-white">PowerPoint</span>
+<span class="font-label-mono-sm text-[11px] px-2.5 py-1 bg-[#16191F] border border-white/[0.08] text-white">Canva</span>
+</div>
+</div>
+<div>
+<a class="inline-flex items-center justify-center font-label-mono-sm text-label-mono-sm uppercase tracking-[0.14em] px-5 py-3 bg-white/[0.03] text-[#F4F5F7] border border-white/[0.28] hover:border-primary hover:text-primary transition-all w-full sm:w-auto" href="mailto:hafidzbustomi75@gmail.com">
+            DISCUSS A TASK →
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. PEER ENDORSEMENT -->
+<section class="w-full max-w-[1280px] mx-auto px-[6vw] py-[80px] border-t border-white/[0.12]" id="testimonial">
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] tracking-[0.14em] uppercase mb-8">
+      • 06 / PEER VERIFICATION •
+    </div>
+<!-- Frame -->
+<div class="bg-[#16191F] border border-white/[0.12] border-l-4 border-l-white p-8 sm:p-12 relative">
+<div class="absolute top-6 right-8 font-label-mono-sm text-[10px] text-[#5A6270] tracking-widest uppercase">
+        VERIFIED PEER NOTE // ITPLN
+      </div>
+<p class="font-headline-md text-[20px] sm:text-[24px] text-white leading-relaxed mb-6 font-medium">
+        “Hafidz is a dedicated and fast-learning Informatics student at ITPLN with strong enthusiasm for programming, problem solving, and collaborative projects.”
+      </p>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high border border-white/[0.15] flex items-center justify-center font-bold text-white text-sm">
+          AF
+        </div>
+<div>
+<div class="font-headline-md text-[16px] font-semibold text-white">Abi Farhan</div>
+<div class="font-label-mono-sm text-[11px] text-[#9CA3AF]">Colleague · Institut Teknologi PLN (ITPLN)</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. CONTACT SECTION -->
+<section class="w-full max-w-[1280px] mx-auto px-[6vw] py-[100px] border-t border-white/[0.12]" id="contact">
+<div class="font-label-mono-sm text-label-mono-sm text-[#9CA3AF] tracking-[0.14em] uppercase mb-3.5">
+      • 07 / ESTABLISH CONNECTION •
+    </div>
+<div class="max-w-3xl mb-12">
+<h2 class="font-headline-lg text-[42px] sm:text-[60px] lg:text-[72px] font-bold uppercase leading-none tracking-tight mb-6">
+<span class="block text-white">LET'S BUILD</span>
+<span class="block text-[#9CA3AF]">SOMETHING PRECISE.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+        Open for internship opportunities, study groups, Python &amp; AI automation discussions, or tech collaborations.
+      </p>
+</div>
+<!-- Action Buttons Row -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center justify-center font-label-mono-sm text-label-mono-sm uppercase font-bold tracking-[0.14em] px-6 py-4 bg-[#E5E7EB] text-[#0A0B0D] border border-[#E5E7EB] hover:bg-white hover:shadow-[0_0_24px_rgba(56,189,248,0.4)] transition-all" href="mailto:hafidzbustomi75@gmail.com">
+        EMAIL // HAFIDZBUSTOMI75@GMAIL.COM ↗
+      </a>
+<a class="inline-flex items-center justify-center font-label-mono-sm text-label-mono-sm uppercase tracking-[0.14em] px-6 py-4 bg-white/[0.03] text-[#F4F5F7] border border-white/[0.28] hover:border-primary hover:text-primary transition-all" href="https://www.linkedin.com/in/muhammad-hafidz-bustomi-646a93334/" rel="noopener noreferrer" target="_blank">
+        LINKEDIN ↗
+      </a>
+<a class="inline-flex items-center justify-center font-label-mono-sm text-label-mono-sm uppercase tracking-[0.14em] px-6 py-4 bg-white/[0.03] text-[#F4F5F7] border border-white/[0.28] hover:border-primary hover:text-primary transition-all" href="https://www.instagram.com/atomic_mii/" rel="noopener noreferrer" target="_blank">
+        INSTAGRAM // @ATOMIC_MII ↗
+      </a>
+</div>
+</section>
+</div></main><footer class="w-full bg-[#08090B] border-t border-white/[0.12] py-7 px-[6vw]"><div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left"><div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">© 2026 MUHAMMAD HAFIDZ BUSTOMI</div><div class="font-label-mono-sm text-label-mono-sm text-outline tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>INFORMATICS ENGINEERING · ITPLN · ALL SYSTEMS NOMINAL</div></div></footer></body></html>
